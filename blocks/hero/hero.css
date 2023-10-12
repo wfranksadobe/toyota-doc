@@ -70,7 +70,7 @@ main .hero img {
   height: 100%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1280px) {
   main .hero img {
     object-fit: cover;
     object-position: 0 -250px;

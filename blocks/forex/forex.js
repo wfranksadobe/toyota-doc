@@ -12,7 +12,6 @@ export default async function decorate(block) {
       `;
       container.append(li);
     });
-  block.innerHTML = '';
-  block.append('Exchange Rates');
+  block.innerHTML = '<h4>Exchange Rates</h4>';
   block.append(container);
 }
