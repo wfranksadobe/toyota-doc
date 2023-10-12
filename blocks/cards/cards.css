@@ -45,7 +45,7 @@
   flex-direction: column;
   justify-content: center;
   border:none;
-  height: 500px;
+
 }
 
 .fullwidth > ul > li:nth-child(even) {
@@ -76,16 +76,15 @@
 @media (min-width: 960px) {
   .fullwidth ul li picture img {
     width: 620px;
-    aspect-ratio: 16/7;
+    aspect-ratio: 16/8;
   }
 
   .fullwidth .cards-card-image {
-    padding-top: 100px;
+    padding-top: 66px;
     width: 620px;
 }
 
 }
-
 
 
 .fullwidth .cards-card-body {
