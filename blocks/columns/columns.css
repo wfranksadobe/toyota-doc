@@ -30,3 +30,9 @@
     order: unset;
   }
 }
+
+.border > div > div {
+  padding: 0 20px;
+  border: 1px solid #000;
+}
+
