@@ -41,8 +41,10 @@ footer .columns > div {
 }
 
 @media (min-width: 900px) {
-  flex-direction: row;
-  gap: 160px;
+  footer .columns > div {
+    flex-direction: row;
+    gap: 160px;
+  }
 }
 
 footer .footer p:nth-child(5) {
