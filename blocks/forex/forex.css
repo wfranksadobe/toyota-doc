@@ -21,12 +21,16 @@ main .forex-container > div {
       }
   }
 
-.forex ul {
-    list-style: none;
+.forex table {
     padding: 0;
     margin: 0;
-    display: flex;
     gap: 2em;
     margin: 0;
     box-sizing: border-box;
+    table-layout: auto;
+    width: 400px;
+}
+
+.forex table img {
+     width: 50px;
 }
