@@ -1,3 +1,5 @@
+import { fetchPlaceholders } from '../../scripts/lib-franklin.js';
+
 export function createElement(tagName, options = {}) {
   const { classes = [], props = {} } = options;
   const elem = document.createElement(tagName);
@@ -17,20 +19,29 @@ export function createElement(tagName, options = {}) {
 
   return elem;
 }
-export default function decorate(block) {
+export default async function decorate(block) {
   const contentWrapper = block.querySelector(':scope > div > div:first-child');
-  const callOutWrapper = block.querySelector(':scope > div > div:last-child');
-  const parentContainer = contentWrapper.parentElement.parentElement;
+  contentWrapper.className = 'feature-content-wrapper'; 
+  
   const picture = block.querySelector('picture');
   const pictureWrapper = picture.closest('p');
   const contentContainer = createElement('div', { classes: 'feature-content-container' });
+
   const mediaWrapper = createElement('div', { classes: 'feature-content-media' });
-  parentContainer.prepend(mediaWrapper);
   mediaWrapper.appendChild(pictureWrapper);
+  const parentContainer = contentWrapper.parentElement.parentElement;
+  parentContainer.prepend(mediaWrapper);
+  
+  const callOutWrapper = block.querySelector(':scope > div > div:last-child');
+  callOutWrapper.className = 'feature-callout-wrapper';
+  const placeholders = await fetchPlaceholders('');
+  const { interestrate } = placeholders;
+  const interest = createElement('p', { classes: 'feature-interest-rate' });
+  interest.innerHTML = `<strong>${interestrate}%</strong><sup>APR</sup>`;
+  callOutWrapper.appendChild(interest);
+
   contentContainer.appendChild(contentWrapper);
   parentContainer.appendChild(contentContainer);
   parentContainer.appendChild(callOutWrapper);
   contentContainer.prepend(mediaWrapper);
-  callOutWrapper.className = 'feature-callout-wrapper';
-  contentWrapper.className = 'feature-content-wrapper';
 }
