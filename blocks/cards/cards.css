@@ -60,6 +60,13 @@
   .fullwidth > ul > li:nth-child(even) {
     flex-direction: row-reverse;
   }
+
+ .reverse > ul > li {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+  }
 }
 
 .fullwidth ul li picture img {
@@ -103,15 +110,30 @@
   }
 }
 
-.fullwidth > ul > li:nth-child(odd) .cards-card-body{
-  padding: 0 40px;
+.fullwidth.reverse > ul > li:nth-child(odd) .cards-card-body{
+  padding: 0px;
+  width: 420px;
 }
 
+
+
+.fullwidth > ul > li:nth-child(odd) .cards-card-body{
+  padding: 0 40px;
+
+}
+
+
+
 @media (min-width: 960px) {
+
   .fullwidth > ul > li:nth-child(odd) .cards-card-body{
     padding-left: 150px;
   }
+
+
+
 }
+
 
 .fullwidth .cards-card-body h3 {
   font-size: 36px;
