@@ -238,6 +238,19 @@ main img {
   
 }
 
+.icon-toyota_logo {
+  width: 128px;
+  height: 48px;
+}
+
+@media (min-width: 900px) {
+  .icon-toyota_logo {
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
 
 main .section {
   padding: 12px 0;
