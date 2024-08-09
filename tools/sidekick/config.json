@@ -1,6 +1,6 @@
 {
-    "project": "SecurBank",
-    "host": "www.securbankdemo.com",
+    "project": "Toyota",
+    "host": "main--toyota-doc--wfranksadobe.hlx.live",
     "plugins": [
         {
           "id": "library",
